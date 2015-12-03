@@ -16,7 +16,7 @@ class WindowGame extends BasicGame
 
     public WindowGame()
     {
-        super("Lesson 1 :: WindowGame");
+        super("Tower Defense Stars Wars");
     }
 
     @Override
