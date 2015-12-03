@@ -1,48 +1,41 @@
-import org.newdawn.slick.AppGameContainer;
-import org.newdawn.slick.BasicGame;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Input;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
 
-
-
-class WindowGame extends BasicGame
+class WindowGame extends StateBasedGame
 {
-    private GameContainer container;
+    // Game state identifiers
+    public static final int SPLASHSCREEN = 0;
+    public static final int MAINMENU     = 1;
+    public static final int GAME         = 2;
 
-    public static void main(String[] args) throws SlickException
-    {
-        new AppGameContainer(new WindowGame(), 800, 600, false).start();
+    // Application Properties
+    public static final int WIDTH   = 640;
+    public static final int HEIGHT  = 480;
+    public static final int FPS     = 60;
+
+    // Class Constructor
+    public WindowGame(String appName) {
+        super(appName);
     }
 
-    public WindowGame()
-    {
-        super("Lesson 1 :: WindowGame");
+    // Initialize your game states (calls init method of each gamestate, and set's the state ID)
+    public void initStatesList(GameContainer gc) throws SlickException {
+        // The first state added will be the one that is loaded first, when the application is launched
+        this.addState(new SplashScreen(SPLASHSCREEN));
+        this.addState(new MainMenu(MAINMENU));
+        this.addState(new Game(GAME));
     }
 
-    @Override
-    public void init(GameContainer container) throws SlickException
-    {
-        this.container = container;
-    }
-
-    @Override
-    public void render(GameContainer container, Graphics g) throws SlickException
-    {
-    }
-
-    @Override
-    public void update(GameContainer container, int delta) throws SlickException
-    {
-    }
-
-    @Override
-    public void keyReleased(int key, char c)
-    {
-        if (Input.KEY_ESCAPE == key)
-        {
-            container.exit();
+    // Main Method
+    public static void main(String[] args) {
+        try {
+            AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defsense"));
+            app.setDisplayMode(WIDTH, HEIGHT, false);
+            app.setTargetFrameRate(FPS);
+            app.setShowFPS(true);
+            app.start();
+        } catch(SlickException e) {
+            e.printStackTrace();
         }
     }
 }
