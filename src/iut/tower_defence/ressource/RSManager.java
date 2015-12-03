@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by pierre-antoine on 03/12/15.
  */
-public class RSManager {
+public class RSManager implements MemoryHandler {
     //Container
     //Singleton
     List<ArrayList<GameObject>> golist;
@@ -23,10 +23,6 @@ public class RSManager {
     }
 
     private RSManager() {
-    }
-
-    public void generate() {
-
     }
 
 
