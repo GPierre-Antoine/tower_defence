@@ -14,7 +14,7 @@ public class Character extends GameObject {
     private int range;
     private boolean isDead;
 
-    public Character(int life, int defense, int attack, int speed, int speedAttack, int range, boolean isDead) {
+    public Character(int life, int defense, int attack, int speedAttack, int range, boolean isDead) {
         this.life = life;
         this.defense = defense;
         this.attack = attack;
