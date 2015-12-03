@@ -1,5 +1,7 @@
 package iut.tower_defence.data.character;
 
+import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
 import iut.tower_defence.data.GameObject;
 
 /**
@@ -25,12 +27,28 @@ public class Character extends GameObject {
 
     public void takeDamageFrom(Character other) {
         int damage = other.attack - defense;
-        if (damage > 0) this.life =- damage =wjdbuqh;
+        if (damage > 0) this.life =- damage;
     }
 
-    public void move(int distance) {
+    public void move(GameContainer gc, float delta) {
+        Input input = gc.getInput();
+        int speed = this.speed;
+        float distance = speed * (delta / 1000);
 
+        if (input.isKeyDown(Input.KEY_LEFT)) {
+            this.setX(this.getX() - distance);
+        }
+        if (input.isKeyDown(Input.KEY_RIGHT)) {
+            this.setX(this.getX() + distance);
+        }
+        if (input.isKeyDown(Input.KEY_UP)) {
+            this.setY(this.getY() - distance);
+        }
+        if (input.isKeyDown(Input.KEY_DOWN)) {
+            this.setY(this.getY() + distance);
+        }
     }
+
 
     public void applyUpgrade() {
 
