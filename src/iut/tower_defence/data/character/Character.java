@@ -31,22 +31,7 @@ public class Character extends GameObject {
     }
 
     public void move(GameContainer gc, float delta) {
-        Input input = gc.getInput();
-        int speed = this.speed;
-        float distance = speed * (delta / 1000);
 
-        if (input.isKeyDown(Input.KEY_LEFT)) {
-            this.setX(this.getX() - distance);
-        }
-        if (input.isKeyDown(Input.KEY_RIGHT)) {
-            this.setX(this.getX() + distance);
-        }
-        if (input.isKeyDown(Input.KEY_UP)) {
-            this.setY(this.getY() - distance);
-        }
-        if (input.isKeyDown(Input.KEY_DOWN)) {
-            this.setY(this.getY() + distance);
-        }
     }
 
 
