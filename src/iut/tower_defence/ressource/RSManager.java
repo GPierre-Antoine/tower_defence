@@ -13,7 +13,6 @@ import java.util.List;
 public class RSManager {
     //Container
     //Singleton
-    HashMap<GameObject,Factory> factories;
     List<ArrayList<GameObject>> golist;
 
     private static RSManager instance = null;
