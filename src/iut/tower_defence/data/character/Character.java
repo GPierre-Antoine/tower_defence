@@ -22,4 +22,17 @@ public class Character extends GameObject {
         this.range = range;
         this.isDead = isDead;
     }
+
+    public void takeDamageFrom(Character other) {
+        int damage = other.attack - defense;
+        if (damage > 0) this.life =- damage =wjdbuqh;
+    }
+
+    public void move(int distance) {
+
+    }
+
+    public void applyUpgrade() {
+
+    }
 }
