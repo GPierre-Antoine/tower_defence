@@ -5,7 +5,7 @@ package iut.tower_defence.data.character.monster;
  */
 public class MMelee extends Monster {
 
-    public MMelee(int life, int defense, int attack, int speed, int speedAttack, int range, boolean isDead) {
-        super(life, defense, attack, speed, speedAttack, range, isDead);
-    }
+    public MMelee() {
+        super(30, 15, 4, 1, 1, 1, false);
+    } //default
 }
