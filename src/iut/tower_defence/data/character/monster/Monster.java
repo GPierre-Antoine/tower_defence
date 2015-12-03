@@ -7,4 +7,7 @@ import iut.tower_defence.data.character.Character;
  */
 public class Monster extends Character {
 
+    public Monster(int life, int defense, int attack, int speed, int speedAttack, int range, boolean isDead) {
+        super(life, defense, attack, speedAttack, range, isDead);
+    }
 }
