@@ -5,7 +5,5 @@ package iut.tower_defence.data.character.monster;
  */
 public class MRange extends Monster {
 
-    public MRange() {
-        super(20, 5, 10, 1, 3, 10, false);
-    } //Default
+    public MRange() { super(20, 5, 10, 1, 3, 10, false); } //Default
 }

@@ -11,5 +11,4 @@ public class Tower extends Character {
         super(50, 3, 10, 1, 12, false);
     } //default
 
-
 }

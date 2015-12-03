@@ -8,7 +8,7 @@ public class Player extends Character {
     private String name;
 
     public Player(String name) {
-        super();
+        super(150, 5, 10, 1, 1, false);
         this.name = name;
     } // Player
 }
