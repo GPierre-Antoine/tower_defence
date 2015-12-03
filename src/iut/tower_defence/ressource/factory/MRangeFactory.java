@@ -9,6 +9,6 @@ import iut.tower_defence.data.character.monster.MRange;
 public class MRangeFactory extends GameObjectFactory {
 
     protected GameObject buildGameObject () {
-        return new MRange();
+        return MRange();
     } // buildGameObject
 }
