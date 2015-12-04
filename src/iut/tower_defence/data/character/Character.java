@@ -15,6 +15,7 @@ public class Character extends GameObject {
     private int speedAttack;
     private int range;
     private boolean isDead;
+    private int position;
 
     public Character(int life, int defense, int attack, int speedAttack, int range, boolean isDead) {
         this.life = life;
@@ -30,8 +31,8 @@ public class Character extends GameObject {
         if (damage > 0) this.life =- damage;
     }
 
-    public void move(GameContainer gc, float delta) {
-
+    public void move(int delta) {
+        this.position += delta;
     }
 
 
