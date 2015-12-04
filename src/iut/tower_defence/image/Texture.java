@@ -22,7 +22,7 @@ public class Texture {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } // Texture
 
     public void draw(Graphics g, float x, float y) {
         g.drawImage(image,x,y);
