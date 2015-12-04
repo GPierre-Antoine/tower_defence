@@ -5,7 +5,7 @@ import iut.tower_defence.data.Inputable;
 /**
  * Created by pierre-antoine on 03/12/15.
  */
-public class Player extends Character implements Inputable {
+public class Player extends Character {
 
     private String name;
     private int score;
