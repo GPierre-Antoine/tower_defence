@@ -12,6 +12,6 @@ public class Hit extends Control{
     }
 
     public void execute() {
-        target.attack();
+        target.attack(-1);
     }
 }
