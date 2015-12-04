@@ -13,15 +13,3 @@ public abstract class Control {
         this.target = player;
     }
 }
-
-public class MoveLeft extends Control {
-
-    public MoveLeft(Player player) {
-        super(player);
-    }
-
-    @Override
-    public void execute() {
-        target.move(-1);
-    }
-}
