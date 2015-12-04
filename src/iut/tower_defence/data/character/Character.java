@@ -31,7 +31,14 @@ public class Character extends GameObject {
 
     public void takeDamageFrom(Character other) {
         int damage = other.attack - defense;
-        if (damage > 0) this.life =- damage;
+        if (damage > 0)
+        {
+            this.life =- damage;
+            if (life <= 0)
+            {
+                isDead = true;
+            }
+        }
     } // takeDamageFrom
 
     public void move(int delta) {
@@ -39,12 +46,19 @@ public class Character extends GameObject {
     } // move
 
     public void attack(int delta){
-        //TODO
-    }
+        if (distance < range)
+        {
+            //TO DO
+        }
+    } // attack
 
     public void update() {
 
-    }
+    } // update
+
+    public void destroy() {
+
+    } //destroy
 
     public List<GameObject> getCollidingEntities(int direction) {
         List<GameObject> goList = new ArrayList<>();
@@ -53,5 +67,5 @@ public class Character extends GameObject {
 
     public void applyUpgrade() {
 
-    }
+    } // applyUpgrade
 }
