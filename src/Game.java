@@ -1,9 +1,7 @@
-import iut.tower_defence.data.GameObject;
+import iut.tower_defence.data.character.Player;
+import iut.tower_defence.directives.DirectiveHandler;
 import iut.tower_defence.ressource.RSManager;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
@@ -15,8 +13,8 @@ public class Game extends BasicGameState
     public static int ID;
     private static String URL_GAME = "iut/tower_defence/image/game.jpg";
     private Image gameImage;
-    private GameObject gameObject;
-
+    private RSManager  rsm;
+    private DirectiveHandler inputHandler;
     public Game(int ID) {
         Game.ID = ID;
     }
@@ -27,6 +25,13 @@ public class Game extends BasicGameState
     }
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+        rsm = RSManager.getInstance();
+        {
+            Player player = new Player();
+            rsm.add(player);
+            inputHandler = DirectiveHandler.getInstance();
+            inputHandler.initialize(player);
+        }
         gameImage = new Image(URL_GAME);
         //gameObject = new GameObject();
     }
@@ -40,7 +45,12 @@ public class Game extends BasicGameState
         //splashscreen.draw(0, 0, WindowGame.WIDTH, WindowGame.HEIGHT);
     }
     public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException {
-        RSManager.getInstance().update();
-        RSManager.getInstance().render();
+        rsm.update();
+        rsm.render();
+
+    }
+    @Override
+    public void keyPressed(int key, char c) {
+        DirectiveHandler.StaticTreatInput(key);
     }
 }

@@ -15,11 +15,13 @@ public class RSManager implements MemoryHandler {
     private static RSManager instance = null;
 
     public static synchronized RSManager getInstance() {
-        if (instance == null) instance = new RSManager();
+        if (instance == null)
+            instance = new RSManager();
         return instance;
     }
 
     private RSManager() {
+        golist = new HashMap<Class,ArrayList<GameObject>>();
     }
 
 
@@ -44,6 +46,8 @@ public class RSManager implements MemoryHandler {
     }
 
     public void add (GameObject go) {
+        if (!golist.containsKey(go.getClass()))
+            golist.put(go.getClass(),new ArrayList<GameObject>());
         golist.get(go.getClass()).add(go);
     }
 
