@@ -12,13 +12,13 @@ public class Player extends Character {
 
     public Player() {
         super(150, 5, 10, 1, 1, false);
-        this.score = score;
+        score = 0;
     } // Player
 
     public void updateScore (int i) { score += i; } // updateScore
 
     public void setName (String n) {
-        this.name = n;
-    }
+        name = n;
+    } // setName
 
 }
