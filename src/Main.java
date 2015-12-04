@@ -9,8 +9,6 @@ class WindowGame extends StateBasedGame
     public static final int GAME         = 2;
 
     // Application Properties
-    public static final int WIDTH   = 640;
-    public static final int HEIGHT  = 480;
     public static final int FPS     = 60;
 
     // Class Constructor
@@ -30,7 +28,7 @@ class WindowGame extends StateBasedGame
     public static void main(String[] args) {
         try {
             AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defsense"));
-            app.setDisplayMode(WIDTH, HEIGHT, false);
+            app.setFullscreen(true);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(true);
             app.start();

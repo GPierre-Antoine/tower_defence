@@ -1,5 +1,7 @@
 package iut.tower_defence.data;
 
+import org.newdawn.slick.Graphics;
+
 /**
  * Created by pierre-antoine on 03/12/15.
  */
@@ -9,7 +11,7 @@ public class Item extends GameObject {
         //To do
     } // udpate
 
-    public void render() {
+    public void render(Graphics g) {
         //To do
     } // render
 }
