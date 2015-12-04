@@ -46,10 +46,10 @@ public class Character extends GameObject {
     } // move
 
     public void attack(int delta){
-        if (distance < range)
+        /*if (distance < range)
         {
             //TO DO
-        }
+        }*/
     } // attack
 
     public void update() {
