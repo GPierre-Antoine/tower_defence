@@ -27,7 +27,7 @@ class WindowGame extends StateBasedGame
     // Main Method
     public static void main(String[] args) {
         try {
-            AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defsense"));
+            AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defense"));
             app.setFullscreen(true);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(true);
