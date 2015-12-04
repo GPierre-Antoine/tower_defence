@@ -5,8 +5,6 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-import java.net.URL;
-
 /**
  * Created by Alexandre on 03/12/2015.
  */

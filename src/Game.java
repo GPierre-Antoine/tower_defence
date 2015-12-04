@@ -1,12 +1,5 @@
 import iut.tower_defence.data.GameObject;
-import iut.tower_defence.data.character.Player;
-import iut.tower_defence.data.character.monster.MMelee;
-import iut.tower_defence.data.character.monster.MRange;
-import iut.tower_defence.directives.Control;
 import iut.tower_defence.ressource.RSManager;
-import iut.tower_defence.ressource.factory.GameObjectFactory;
-import iut.tower_defence.ressource.factory.MMeleeFactory;
-import iut.tower_defence.ressource.factory.PlayerFactory;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;

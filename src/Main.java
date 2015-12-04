@@ -45,7 +45,7 @@ class WindowGame extends StateBasedGame
     @Override
     public void keyPressed(int key, char c) {
         if(key == Input.KEY_SPACE )
-            enterState(GAME);
+            enterState(MAINMENU);
         else
             super.keyPressed(key, c);
     }
