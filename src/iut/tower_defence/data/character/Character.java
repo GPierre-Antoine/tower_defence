@@ -39,4 +39,11 @@ public class Character extends GameObject {
     public void applyUpgrade() {
 
     }
+
+    public void update() {
+        //To do
+    } // update
+    public void render() {
+        //To do
+    } // render
 }
