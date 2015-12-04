@@ -15,7 +15,7 @@ public class Character extends GameObject {
     private int speedAttack;
     private int range;
     private boolean isDead;
-    private Vector2f position;
+
 
     public Character(int life, int defense, int attack, int speedAttack, int range, boolean isDead) {
         this.life = life;
@@ -31,9 +31,6 @@ public class Character extends GameObject {
         if (damage > 0) this.life =- damage;
     } // takeDamageFrom
 
-    public void render(Graphics g) {
-        texture.draw(g,position.getX(),position.getY()+10);
-    }
     public void move(int delta) {
         position.setX(position.getX() + delta);
     } // move
