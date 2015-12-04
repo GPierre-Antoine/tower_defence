@@ -9,7 +9,7 @@ import iut.tower_defence.data.character.Player;
 public class PlayerFactory extends GameObjectFactory {
 
     protected GameObject buildGameObject () {
-        return new Player();
+        return new Player("bob");
     } // buildGameObject
 
 }

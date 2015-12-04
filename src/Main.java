@@ -1,9 +1,12 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.*;
 
+/**
+ * Created by Alexandre on 03/12/2015.
+ */
 class WindowGame extends StateBasedGame
 {
-    // Game state identifiers
+    // GamestateIdentifiers
     public static final int SPLASHSCREEN = 0;
     public static final int MAINMENU     = 1;
     public static final int GAME         = 2;
@@ -29,13 +32,21 @@ class WindowGame extends StateBasedGame
     // Main Method
     public static void main(String[] args) {
         try {
-            AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defsense"));
+            AppGameContainer app = new AppGameContainer(new WindowGame("Tower Defense"));
             app.setDisplayMode(WIDTH, HEIGHT, false);
             app.setTargetFrameRate(FPS);
-            app.setShowFPS(true);
+            app.setShowFPS(false);
             app.start();
         } catch(SlickException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void keyPressed(int key, char c) {
+        if(key == Input.KEY_SPACE )
+            enterState(GAME);
+        else
+            super.keyPressed(key, c);
     }
 }
