@@ -35,7 +35,7 @@ public class RSManager implements MemoryHandler {
         golist.get(go.getClass()).add(go);
     }
 
-    public List getGameObjects() {
+    public HashMap getGameObjects() {
         return golist;
     }
 
