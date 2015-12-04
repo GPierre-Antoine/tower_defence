@@ -4,6 +4,9 @@ import org.lwjgl.util.vector.Vector2f;
 import org.newdawn.slick.*;
 import iut.tower_defence.data.GameObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by pierre-antoine on 03/12/15.
  */
@@ -38,6 +41,11 @@ public class Character extends GameObject {
     public void update() {
 
     }
+
+    public List<GameObject> getCollidingEntities(int direction) {
+        List<GameObject> goList = new ArrayList<>();
+        return goList;
+    } // getCollidingEntities
 
     public void applyUpgrade() {
 
