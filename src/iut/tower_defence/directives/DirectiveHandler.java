@@ -24,7 +24,19 @@ public class DirectiveHandler {
     }
 
     public void update(Player player){
+        keyBinding.clear();
 
+        int moveRight = Keyboard.getEventKey();
+        keyBinding.put(moveRight, new MoveRight(player));
+
+        int moveLeft = Keyboard.getEventKey();
+        keyBinding.put(moveLeft, new MoveLeft(player));
+
+        int hitLeft = Keyboard.getEventKey();
+        keyBinding.put(hitLeft, new HitLeft(player));
+
+        int hitRight = Keyboard.getEventKey();
+        keyBinding.put(hitRight, new HitRight(player));
     }
 
 
