@@ -39,7 +39,9 @@ public class DirectiveHandler {
         keyBinding.put(hitRight, new HitRight(player));
     }
 
-
+    public void TreatInput (int keyEvent) {
+        keyBinding.get(keyEvent).execute();
+    }
 
 
 }
