@@ -13,7 +13,7 @@ import java.util.List;
 public class RSManager implements MemoryHandler {
     //Container
     //Singleton
-    List<ArrayList<GameObject>> golist;
+    private List<ArrayList<GameObject>> golist;
 
     private static RSManager instance = null;
 
@@ -33,6 +33,10 @@ public class RSManager implements MemoryHandler {
 
     public void add (GameObject go) {
 
+    }
+
+    public List getGameObjects() {
+        return golist;
     }
 
 }

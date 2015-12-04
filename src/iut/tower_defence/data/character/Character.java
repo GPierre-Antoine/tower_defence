@@ -1,7 +1,7 @@
 package iut.tower_defence.data.character;
 
+import org.lwjgl.util.vector.Vector2f;
 import org.newdawn.slick.*;
-import org.newdawn.slick.state.*;
 import iut.tower_defence.data.GameObject;
 
 /**
@@ -15,7 +15,7 @@ public class Character extends GameObject {
     private int speedAttack;
     private int range;
     private boolean isDead;
-    private int position;
+    private Vector2f position;
 
     public Character(int life, int defense, int attack, int speedAttack, int range, boolean isDead) {
         this.life = life;
@@ -31,20 +31,18 @@ public class Character extends GameObject {
         if (damage > 0) this.life =- damage;
     } // takeDamageFrom
 
+    public void render(Graphics g) {
+        texture.draw(g,position.getX(),position.getY()+10);
+    }
     public void move(int delta) {
-        this.position += delta;
+        position.setX(position.getX() + delta);
     } // move
 
+    public void update() {
+
+    }
 
     public void applyUpgrade() {
 
-    } // applyUpgrade
-
-    public void update() {
-        //To do
-    } // update
-
-    public void render() {
-        //To do
-    } // render
+    }
 }
