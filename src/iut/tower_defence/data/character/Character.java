@@ -48,7 +48,7 @@ public class Character extends GameObject {
 
     public List<GameObject> getCollidingEntities(int direction) {
         List<GameObject> goList = new ArrayList<>();
-        return goList;
+        //return goList;
     } // getCollidingEntities
 
     public void applyUpgrade() {
