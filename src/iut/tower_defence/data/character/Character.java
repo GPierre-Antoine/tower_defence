@@ -24,25 +24,26 @@ public class Character extends GameObject {
         this.speedAttack = speedAttack;
         this.range = range;
         this.isDead = isDead;
-    }
+    } // Character
 
     public void takeDamageFrom(Character other) {
         int damage = other.attack - defense;
         if (damage > 0) this.life =- damage;
-    }
+    } // takeDamageFrom
 
     public void move(int delta) {
         this.position += delta;
-    }
+    } // move
 
 
     public void applyUpgrade() {
 
-    }
+    } // applyUpgrade
 
     public void update() {
         //To do
     } // update
+
     public void render() {
         //To do
     } // render
