@@ -38,6 +38,10 @@ public class Character extends GameObject {
         position.setX(position.getX() + delta);
     } // move
 
+    public void attack(int delta){
+        //TODO
+    }
+
     public void update() {
 
     }
