@@ -15,10 +15,20 @@ class WindowGame extends StateBasedGame
     public static final int WIDTH   = 640;
     public static final int HEIGHT  = 480;
     public static final int FPS     = 60;
+    public static WindowGame instance;
+
+    public static WindowGame getInstance() {
+        return instance;
+    }
 
     // Class Constructor
     public WindowGame(String appName) {
         super(appName);
+        instance = this;
+    }
+
+    public static void setState(int state) {
+        WindowGame.getInstance().enterState(state);
     }
 
     // Initialize your game states (calls init method of each gamestate, and set's the state ID)
