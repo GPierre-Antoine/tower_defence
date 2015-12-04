@@ -4,6 +4,9 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+/**
+ * Created by Alexandre on 03/12/2015.
+ */
 public class MainMenu  extends BasicGameState {
     public static int ID;
 
