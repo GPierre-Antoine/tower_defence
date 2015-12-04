@@ -2,10 +2,7 @@ package iut.tower_defence.ressource;
 
 import iut.tower_defence.data.GameObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by pierre-antoine on 03/12/15.
@@ -28,11 +25,22 @@ public class RSManager implements MemoryHandler {
 
 
     public void update() {
+        for (Class key : golist.keySet()) {
+            int s = golist.get(key).size();
+            for (int i = 0;i<s;++i) {
+                golist.get(key).get(i).update();
+            }
+        }
 
     }
 
     public void render() {
-
+        for (Class key : golist.keySet()) {
+            int s = golist.get(key).size();
+            for (int i = 0;i<s;++i) {
+                golist.get(key).get(i).render();
+            }
+        }
     }
 
     public void add (GameObject go) {
