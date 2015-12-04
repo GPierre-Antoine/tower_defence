@@ -5,13 +5,14 @@ import iut.tower_defence.data.character.Player;
 /**
  * Created by julien on 04/12/2015.
  */
-public class Hit extends Control{
+public class HitRight extends Control{
 
-    public Hit(Player player) {
+    public HitRight(Player player) {
         super(player);
     }
 
+    @Override
     public void execute() {
-        target.attack(-1);
+        target.attack(1);
     }
 }

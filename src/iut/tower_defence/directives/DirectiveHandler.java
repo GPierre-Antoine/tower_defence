@@ -19,7 +19,12 @@ public class DirectiveHandler {
     public void initialize(Player player){
         keyBinding.put(Keyboard.KEY_RIGHT, new MoveRight(player));
         keyBinding.put(Keyboard.KEY_LEFT, new MoveLeft(player));
-        keyBinding.put(Keyboard.KEY_SPACE, new Hit(player));
+        keyBinding.put(Keyboard.KEY_Q, new HitLeft(player));
+        keyBinding.put(Keyboard.KEY_D, new HitRight(player));
+    }
+
+    public void update(Player player){
+
     }
 
 
